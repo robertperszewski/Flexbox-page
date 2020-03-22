@@ -52,6 +52,17 @@ html {
           justify-content: center;
 }
 
+@media (max-width: 799px) {
+  .search {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    padding: 10px;
+  }
+}
+
 .search__input {
   width: 60%;
   height: 50%;
@@ -59,6 +70,7 @@ html {
   padding: 0 10px;
   font-size: 1,4rem;
   max-height: 40px;
+  min-height: 30px;
 }
 
 .search__input:focus {
@@ -80,6 +92,7 @@ html {
   -webkit-transition: 0,5s;
   transition: 0,5s;
   max-height: 40px;
+  min-height: 30px;
 }
 
 .search__btn:hover {
@@ -94,6 +107,17 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 799px) {
+  .settings {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .settings__icon {
@@ -228,6 +252,13 @@ html {
       flex-basis: 50%;
 }
 
+@media (max-width: 799px) {
+  .main-articles .article {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .article-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -243,8 +274,54 @@ html {
       flex-basis: 30%;
 }
 
+@media (max-width: 1023px) {
+  .article-list .article {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (max-width: 799px) {
+  .article-list .article {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .footer {
-  background-color: snow;
-  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background-color: #7676e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px 0;
+}
+
+.footer .social-media {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.social-media {
+  font-family: "pt sans", "roboto";
+}
+
+.social-media--darken {
+  background-color: #6060e2;
+}
+
+.social-media__title {
+  margin: 20px 0 30px;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.social-media__info {
+  text-indent: 30px;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
